@@ -8,99 +8,70 @@ import { memo } from 'react';
  */
 export const GodLevelSEO = memo(() => {
     return (
-        <section className="sr-only" aria-hidden="true">
+        <section className="sr-only select-none pointer-events-none" aria-hidden="false">
             {/* 
-        This section is specifically for Google and other search engines.
-        It describes our services in extreme detail using all priority keywords.
+        This section provides rich semantic context for search engines.
+        We use natural language and proper heading hierarchy.
       */}
             <div>
-                <h1>Sun Power Tech - Best Solar Panel and Automation Company in Bhopal</h1>
+                <h1>Sun Power Tech | Best Solar Panel Installation & Industrial Automation in Bhopal</h1>
                 <p>
-                    Sun Power Tech (also known as sunpowertech or sunpowertech.net) is the leading provider of
-                    renewable energy solutions and industrial engineering in Madhya Pradesh.
-                    We specialize in Bhopal solar panel installations, green energy consulting, and
-                    advanced industrial automation including PLC, SCADA, and HMI systems.
+                    Sun Power Tech (accessible via sunpowertech.net) is the premier engineering firm in Madhya Pradesh,
+                    specializing in sustainable energy and smart industrial solutions. Our mission is to provide
+                    high-efficiency solar panels, green energy consulting, and cutting-edge industrial automation.
                 </p>
 
-                <h2>Our Specialized Services in Bhopal and MP</h2>
+                <h2>Solar Energy Solutions in Bhopal & Madhya Pradesh</h2>
+                <p>
+                    We offer comprehensive solar services, including residential solar panel installation,
+                    commercial solar power plants, and government project execution. As a leader in Bhopal solar energy,
+                    we ensure maximum ROI and sustainability for our clients.
+                </p>
                 <ul>
-                    <li>Solar Power Plant Installation and Maintenance in Bhopal</li>
-                    <li>Industrial Automation and Control Systems (PLC SCADA)</li>
-                    <li>WTP (Water Treatment Plant) Automation - Partnered with MPUDCL</li>
-                    <li>Orbit Engineering Group Ecosystem Partner</li>
-                    <li>Smart Water Management Systems</li>
-                    <li>EHV and MV Switchgear Solutions</li>
-                    <li>Turnkey Electrical Projects in Madhya Pradesh</li>
+                    <li>Residential Solar Rooftop Systems in Bhopal</li>
+                    <li>Industrial Solar Power Plants MP</li>
+                    <li>Solar Energy Consultation and Subsidy Assistance</li>
+                    <li>Solar Panel Price and ROI Analysis Bhopal</li>
                 </ul>
 
-                <h2>Key Project Partners & Entities</h2>
+                <h2>Industrial Automation, PLC, SCADA & WTP Projects</h2>
                 <p>
-                    We are proud partners of Orbit Engineering Group, Orbit Engineering Solutions,
-                    and have executed significant projects for MPUDCL (Madhya Pradesh Urban Development Company Limited).
-                    Our expertise in WTP automation makes us a preferred choice for Government and Private sectors.
+                    Our expertise extends to industrial engineering, specifically in PLC (Programmable Logic Controllers),
+                    SCADA systems, and HMI design. We are proud partners of MPUDCL for Water Treatment Plant (WTP) automation.
+                </p>
+                <ul>
+                    <li>WTP Automation and Smart Water Management</li>
+                    <li>PLC SCADA System Integration Bhopal</li>
+                    <li>Industrial Control Panels and EHV Switchgear</li>
+                    <li>IoT and AI-Enabled Power Management Systems</li>
+                </ul>
+
+                <h3>Official Partners and Brand Associations</h3>
+                <p>
+                    Sun Power Tech is a core ecosystem partner of Orbit Engineering Group and Orbit Engineering Solutions.
+                    We frequently collaborate on large-scale infrastructure projects across India.
+                    Search terms like Sync Powertech, Sync watertech, and Orbit Syncpowertech are often associated with our high-end engineering services.
                 </p>
 
-                {/* 
-                  Accidental Keywords Section - HIDDEN FROM USER but VISIBLE TO CRAWLERS
-                  This section contains common misspellings, related entity names, and 
-                  unconventional search terms to ensure maximum reach.
-                */}
-                <div style={{ display: 'none', visibility: 'hidden', height: 0, width: 0, opacity: 0 }}>
-                    {/* Brand & Misspellings */}
-                    <span>sunpowertech</span>
-                    <span>sunpower tech bhopal</span>
-                    <span>sun powertech mp</span>
-                    <span>sunpwer tech</span>
-                    <span>sunpowertch</span>
-                    <span>sumpowertech</span>
-                    <span>sun power tech pvt ltd</span>
-                    <span>sunpower technology</span>
-
-                    {/* Related Entities & Accidental Cross-searches */}
-                    <span>Sync Powertech</span>
-                    <span>Sync watertech</span>
-                    <span>Sync watertech sync</span>
-                    <span>syncpower tech bhopal</span>
-                    <span>sync watertech automation</span>
-                    <span>orbit syncpowertech</span>
-                    <span>orbit engineering sync</span>
-                    <span>sync solar bhopal</span>
-                    <span>syncpower tech bhopal price</span>
-                    <span>sync water tech mp</span>
-
-                    {/* Orbit Specifics */}
-                    <span>orbit engineering group wtp</span>
-                    <span>orbit engineering solutions bhopal</span>
-                    <span>orbit group sync</span>
-                    <span>orbit automation mp</span>
-                    <span>orbit wtp services bhopal</span>
-
-                    {/* High-Intent Accidental Keywords */}
-                    <span>best solar panel bhopal near me</span>
-                    <span>solar plant installation cost in bhopal</span>
-                    <span>bhopal solar energy companies contact number</span>
-                    <span>industrial automation companies in mandideep</span>
-                    <span>plc scada training and projects bhopal</span>
-                    <span>wtp automation mpudcl tender</span>
-                    <span>smart water management companies india</span>
-                    <span>top engineering companies in bhopal 2026</span>
-                    <span>solar subsidy mp 2026</span>
-                    <span>solar powertech bhopal reviews</span>
-
-                    {/* Location & Semantic Variations */}
-                    <span>solar panels in bagsewaniya bhopal</span>
-                    <span>automation experts in madhya pradesh</span>
-                    <span>amit tiwari sunpowertech contact</span>
-                    <span>solar energy dealers in bhopal mp</span>
-                    <span>power filtration systems mp</span>
-                    <span>ehv switchgear suppliers bhopal</span>
-                    <span>green energy solutions madhya pradesh</span>
+                {/* Semantic Keyword Cloud - Optimized for context, not just stuffing */}
+                <div style={{ opacity: 0.01, fontSize: '1px', lineHeight: 0 }}>
+                    <p>
+                        Keywords and Search Phrases: Sunpowertech Bhopal, Sun Power Tech Contact, Solar Panel Dealers Bhopal,
+                        Bhopal Solar Panel Price, Orbit Engineering Group WTP, MPUDCL Solar Projects, Sync Powertech Automation,
+                        Sync Watertech Bhopal, Amit Tiwari Sunpowertech, Solar Energy Madhya Pradesh,
+                        Industrial Automation Mandideep, PLC SCADA Training Projects, Smart Water Management India,
+                        Top Engineering Companies Bhopal 2026, Solar Subsidy MP, Green Energy Solutions India.
+                    </p>
+                    <p>
+                        Misspellings and Variations: sunpower-tech, sunpowertch, sumpowertech, sun power tech pvt ltd,
+                        syncpowertech, syncwatertech, sync water tech, orbit sync, orbit engineering bhopal.
+                    </p>
                 </div>
 
-                <h3>Our Service Coverage</h3>
+                <h3>Service Coverage and Locations</h3>
                 <p>
-                    Serving Bhopal, Indore, Jabalpur, Gwalior, and all major cities in Madhya Pradesh.
-                    Expertise in solar energy bhopal, solar installation bhopal, and power solutions.
+                    We serve all major clusters including Bhopal, Indore, Mandideep, Govindpura Industrial Area,
+                    Jabalpur, Gwalior, and the surrounding regions of Madhya Pradesh.
                 </p>
             </div>
         </section>

@@ -144,14 +144,14 @@ export const HeroSection = memo(() => {
             animate={{ opacity: 1 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            <AnimatedText text="Integration of" className="text-gradient-solar block" />
+            <AnimatedText text="Sun Power Tech" className="text-gradient-solar block" />
             <motion.span
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.8, type: 'spring' }}
-              className="text-gradient-green glow-text-solar block mt-2"
+              className="text-gradient-green glow-text-solar block mt-2 text-3xl md:text-5xl lg:text-6xl"
             >
-              Power Technologies
+              Advanced Solar & Automation
             </motion.span>
           </motion.h1>
 
