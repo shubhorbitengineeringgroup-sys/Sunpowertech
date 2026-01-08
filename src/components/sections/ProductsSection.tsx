@@ -7,7 +7,7 @@ import { ProductModal } from '@/components/ui/product-modal';
 
 // Power Transfer and Reactors
 import autoTransformersImg from '@/assets/products/auto-transformers.png';
-import chlorinatorImg from '@/assets/products/chlorinator.jpeg';
+
 import furnaceTransformerImg from '@/assets/products/furnace-transformer.jpg';
 import locomotiveTransformerImg from '@/assets/products/locomotive-transformer.png';
 import shuntReactorsImg from '@/assets/products/shunt-reactors.png';
@@ -28,18 +28,18 @@ import rmuImg from '@/assets/products/rmu-up-to-36-kv.png';
 import vacuumInterrupterImg from '@/assets/products/vaccum-interrupter.jpg';
 
 // Drives & Automation
-import blowerImg from '@/assets/products/blower.jpg';
+
 import centrifugeImg from '@/assets/products/centrifuge.jpg';
-import compressorImg from '@/assets/products/compress.jpg';
+
 import cranesImg from '@/assets/products/cranes.jpg';
-import crushersImg from '@/assets/products/crushers-640x506.jpg';
+
 import fansImg from '@/assets/products/fan-product-640x640.jpg';
 import liftsImg from '@/assets/products/lifts-960x960.jpg';
-import millsImg from '@/assets/products/mills.jpg';
-import mixerImg from '@/assets/products/mixer.jpg';
+
+
 import plcImg from '@/assets/products/plc-640x640.webp';
 import pumpsImg from '@/assets/products/pumps-640x563.webp';
-import wasteWaterImg from '@/assets/products/waste-water.jpg';
+
 
 const categories = [
   { id: 'all', name: 'All Products' },
@@ -76,30 +76,7 @@ const products = [
     ],
     applications: 'Power transmission, Grid interconnection, Voltage regulation for rural distribution, SuperGrid networks'
   },
-  {
-    id: 2,
-    name: 'Chlorinator',
-    category: 'power-transfer',
-    categoryLabel: 'Power Transfer & Reactors',
-    image: chlorinatorImg,
-    shortDesc: 'Advanced water treatment solutions for safe drinking water.',
-    description: 'Chlorinator adds chlorine to drinking water to eliminate parasites, bacteria and viruses. Chlorinators are also used for swimming pool water, odor control of slime and marine growths in cooling water towers, circulating water and in service water systems.',
-    longDescription: 'Our chlorinators ensure safe and effective water treatment across various applications. From municipal water supplies to industrial cooling systems, these units deliver precise chlorine dosing for optimal disinfection results with advanced safety features.',
-    features: [
-      'Precise chlorine dosing',
-      'Automated control systems',
-      'Corrosion resistant materials',
-      'Low maintenance design',
-      'Safety interlocks included',
-      'Digital monitoring capability'
-    ],
-    specs: [
-      { label: 'Capacity', value: 'Custom range' },
-      { label: 'Control', value: 'Automated' },
-      { label: 'Application', value: 'Industrial & Municipal' }
-    ],
-    applications: 'Drinking water treatment, Swimming pools, Cooling towers, Industrial water systems, Marine applications'
-  },
+
   {
     id: 3,
     name: 'Furnace Transformers',
@@ -396,30 +373,7 @@ const products = [
   },
 
   // Drives & Automation (12 products)
-  {
-    id: 15,
-    name: 'Blowers',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: blowerImg,
-    shortDesc: 'Essential equipment for forced air circulation in industrial systems.',
-    description: 'Blowers are essential equipment for forced air circulation in industrial systems, ensuring efficient cooling, ventilation, and optimal performance of electrical and mechanical installations.',
-    longDescription: 'Our industrial blowers are designed for continuous operation in demanding environments. They provide reliable airflow for cooling systems, pneumatic conveying, and ventilation applications with energy-efficient performance.',
-    features: [
-      'High airflow capacity',
-      'Energy efficient',
-      'Low noise operation',
-      'Robust construction',
-      'Variable speed options',
-      'Easy maintenance'
-    ],
-    specs: [
-      { label: 'Type', value: 'Centrifugal/Positive' },
-      { label: 'Application', value: 'Industrial' },
-      { label: 'Control', value: 'VFD Compatible' }
-    ],
-    applications: 'Cooling systems, Ventilation, Pneumatic conveying, Industrial processes, HVAC systems'
-  },
+
   {
     id: 16,
     name: 'Centrifuges',
@@ -444,30 +398,7 @@ const products = [
     ],
     applications: 'Pharmaceutical, Food processing, Chemical industry, Wastewater treatment, Oil & gas'
   },
-  {
-    id: 17,
-    name: 'Compressors',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: compressorImg,
-    shortDesc: 'Critical equipment for high-pressure air or gas supply.',
-    description: 'Compressors are critical equipment that provide high-pressure air or gas for industrial processes, ensuring efficient operation, reliability, and optimal system performance.',
-    longDescription: 'Our compressor range includes rotary screw, reciprocating, and centrifugal types for various applications. They feature advanced controls for energy optimization and reliable operation in continuous industrial use.',
-    features: [
-      'High pressure capability',
-      'Energy efficient motors',
-      'Advanced controls',
-      'Low vibration',
-      'Oil-free options',
-      'Remote monitoring'
-    ],
-    specs: [
-      { label: 'Pressure', value: 'Up to 500 bar' },
-      { label: 'Type', value: 'Screw/Reciprocating' },
-      { label: 'Drive', value: 'Electric/Diesel' }
-    ],
-    applications: 'Manufacturing, Mining, Oil & gas, Food & beverage, Pharmaceutical'
-  },
+
   {
     id: 18,
     name: 'Cranes',
@@ -492,30 +423,7 @@ const products = [
     ],
     applications: 'Steel plants, Warehouses, Ports, Manufacturing, Construction sites'
   },
-  {
-    id: 19,
-    name: 'Crushers',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: crushersImg,
-    shortDesc: 'Heavy-duty machines for efficient material processing.',
-    description: 'Crushers are heavy-duty machines engineered to break down rocks, ores, and other materials efficiently. They ensure high productivity, durability, and consistent performance in industrial applications.',
-    longDescription: 'Our crusher range includes jaw, cone, impact, and gyratory types for various crushing applications. They feature wear-resistant components, hydraulic adjustment, and automation for optimal crushing efficiency.',
-    features: [
-      'High crushing capacity',
-      'Wear-resistant materials',
-      'Hydraulic adjustment',
-      'Automated control',
-      'Easy maintenance',
-      'Multiple size options'
-    ],
-    specs: [
-      { label: 'Type', value: 'Jaw/Cone/Impact' },
-      { label: 'Capacity', value: 'Up to 2000 TPH' },
-      { label: 'Feed Size', value: 'Up to 1500mm' }
-    ],
-    applications: 'Mining, Quarrying, Recycling, Aggregate production, Cement industry'
-  },
+
   {
     id: 20,
     name: 'Fans',
@@ -564,54 +472,8 @@ const products = [
     ],
     applications: 'Commercial buildings, Industrial facilities, Warehouses, Shopping malls, Hospitals'
   },
-  {
-    id: 22,
-    name: 'Mills',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: millsImg,
-    shortDesc: 'Heavy-duty machines for grinding and processing materials.',
-    description: 'Mills are heavy-duty machines designed for grinding, crushing, or processing raw materials efficiently. They ensure high productivity, durability, and consistent performance in industrial operations.',
-    longDescription: 'Our mill range includes ball mills, SAG mills, vertical roller mills, and hammer mills for various grinding applications. They feature advanced wear protection, automated controls, and energy-efficient designs.',
-    features: [
-      'High grinding efficiency',
-      'Wear-resistant liners',
-      'Automated controls',
-      'Variable speed drives',
-      'Low energy consumption',
-      'Multiple size options'
-    ],
-    specs: [
-      { label: 'Type', value: 'Ball/SAG/VRM' },
-      { label: 'Capacity', value: 'Up to 500 TPH' },
-      { label: 'Power', value: 'Up to 20 MW' }
-    ],
-    applications: 'Mining, Cement production, Power plants, Mineral processing, Chemical industry'
-  },
-  {
-    id: 23,
-    name: 'Mixers',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: mixerImg,
-    shortDesc: 'Precision machines for uniform material blending.',
-    description: 'Mixers are precision machines designed to blend materials uniformly, ensuring consistent quality, efficiency, and reliability in industrial and manufacturing processes.',
-    longDescription: 'Our mixer range includes ribbon blenders, paddle mixers, and high-shear mixers for various applications. They feature stainless steel construction, hygienic design, and precise speed control for optimal mixing results.',
-    features: [
-      'Uniform mixing',
-      'Hygienic design',
-      'Variable speed control',
-      'Easy cleaning',
-      'Multiple configurations',
-      'Automated operation'
-    ],
-    specs: [
-      { label: 'Type', value: 'Ribbon/Paddle/High-shear' },
-      { label: 'Material', value: 'SS316/SS304' },
-      { label: 'Capacity', value: 'Up to 50,000L' }
-    ],
-    applications: 'Food processing, Pharmaceutical, Chemical, Cosmetics, Construction materials'
-  },
+
+
   {
     id: 24,
     name: 'PLC',
@@ -660,30 +522,7 @@ const products = [
     ],
     applications: 'Water supply, Wastewater, Oil & gas, Chemical processing, Power generation'
   },
-  {
-    id: 26,
-    name: 'Water & Wastewater Solutions',
-    category: 'drives-automation',
-    categoryLabel: 'Drives & Automation',
-    image: wasteWaterImg,
-    shortDesc: 'Comprehensive treatment and management systems.',
-    description: 'Water & Wastewater Solutions provide efficient treatment, purification, and management systems, ensuring sustainable water use, environmental compliance, and reliable operation.',
-    longDescription: 'Our water and wastewater solutions include treatment plants, filtration systems, and monitoring equipment. They ensure clean water supply and safe wastewater disposal while meeting environmental regulations and sustainability goals.',
-    features: [
-      'Complete treatment systems',
-      'Advanced filtration',
-      'Automated controls',
-      'Real-time monitoring',
-      'Energy efficient',
-      'Regulatory compliant'
-    ],
-    specs: [
-      { label: 'Capacity', value: 'Custom MLD' },
-      { label: 'Treatment', value: 'Primary/Secondary/Tertiary' },
-      { label: 'Monitoring', value: 'SCADA Enabled' }
-    ],
-    applications: 'Municipal water supply, Industrial wastewater, Sewage treatment, Water recycling, Effluent treatment'
-  },
+
 ];
 
 export const ProductsSection = memo(() => {
