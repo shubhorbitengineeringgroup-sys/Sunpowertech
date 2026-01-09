@@ -31,7 +31,7 @@ import vacuumInterrupterImg from '@/assets/products/vaccum-interrupter.jpg';
 
 import centrifugeImg from '@/assets/products/centrifuge.jpg';
 
-import cranesImg from '@/assets/products/cranes.jpg';
+import cranesImg from '@/assets/products/cranes.jpeg';
 
 import fansImg from '@/assets/products/fan-product-640x640.jpg';
 import liftsImg from '@/assets/products/lifts-960x960.jpg';
