@@ -99,17 +99,39 @@ export const ContactSection = memo(() => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const formData = new FormData(e.currentTarget);
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    toast.success('Message sent! We will contact you soon.');
+    try {
+      const response = await fetch('https://formspree.io/f/xdaanoen', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
 
-    setTimeout(() => setIsSuccess(false), 3000);
+      if (response.ok) {
+        setIsSuccess(true);
+        toast.success('Message sent! We will contact you soon.');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        const data = await response.json();
+        if (Object.hasOwnProperty.call(data, 'errors')) {
+          toast.error(data.errors.map((error: any) => error.message).join(', '));
+        } else {
+          toast.error('Oops! There was a problem submitting your form');
+        }
+      }
+    } catch (error) {
+      toast.error('Oops! There was a problem submitting your form');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setIsSuccess(false), 3000);
+    }
   };
 
   return (
@@ -243,6 +265,8 @@ export const ContactSection = memo(() => {
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
+            action="https://formspree.io/f/xdaanoen"
+            method="POST"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, type: 'spring' }}
@@ -300,6 +324,7 @@ export const ContactSection = memo(() => {
                   <User className="w-5 h-5" />
                 </div>
                 <Input
+                  name="name"
                   placeholder="Your Name"
                   required
                   className={`h-12 pl-12 bg-background/50 border-white/10 hover:border-primary/30 transition-all duration-300 ${focusedField === 'name' ? 'border-primary ring-2 ring-primary/20 bg-background' : ''}`}
@@ -316,6 +341,7 @@ export const ContactSection = memo(() => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <Input
+                  name="email"
                   type="email"
                   placeholder="Email Address"
                   required
@@ -335,6 +361,7 @@ export const ContactSection = memo(() => {
                 <FileText className="w-5 h-5" />
               </div>
               <Input
+                name="subject"
                 placeholder="Subject"
                 required
                 className={`h-12 pl-12 bg-background/50 border-white/10 hover:border-primary/30 transition-all duration-300 ${focusedField === 'subject' ? 'border-primary ring-2 ring-primary/20 bg-background' : ''}`}
@@ -352,6 +379,7 @@ export const ContactSection = memo(() => {
                 <MessageSquare className="w-5 h-5" />
               </div>
               <Textarea
+                name="message"
                 placeholder="Your Message..."
                 rows={5}
                 required
