@@ -4,9 +4,9 @@
     "description": "Leading Solar Panel and Industrial Automation solutions in Bhopal.",
     "icons": [
         {
-            "src": "favicon.png",
-            "sizes": "192x192 512x512",
-            "type": "image/png"
+            "src": "favicon.ico",
+            "sizes": "256x256",
+            "type": "image/x-icon"
         },
         {
             "src": "og-image.png",
