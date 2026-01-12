@@ -190,7 +190,7 @@ export const ContactSection = memo(() => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-4">
             {contactInfo.map((item, index) => (
@@ -202,7 +202,7 @@ export const ContactSection = memo(() => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl h-[400px] sm:h-[320px] group isolate"
+              className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl h-[350px] sm:h-[400px] lg:h-[320px] group isolate"
             >
               {/* Actual Google Map Embed with custom styling */}
               <iframe
@@ -228,7 +228,7 @@ export const ContactSection = memo(() => {
               </div>
 
               {/* Bottom Info Card */}
-              <div className="absolute bottom-4 left-4 right-4 translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 flex flex-col sm:flex-row items-stretch sm:items-end justify-between gap-4">
+              <div className="absolute bottom-4 left-4 right-4 translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 z-20">
                 <div className="bg-card/60 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl w-full sm:max-w-[240px]">
                   <p className="text-white font-bold text-sm mb-1 flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-primary" />
@@ -242,8 +242,11 @@ export const ContactSection = memo(() => {
                 <Button
                   size="sm"
                   variant="secondary"
-                  className="rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all pointer-events-auto bg-primary text-primary-foreground border-0"
-                  onClick={() => openExternalUrl(GOOGLE_MAPS_URL)}
+                  className="rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all pointer-events-auto bg-primary text-primary-foreground border-0 whitespace-nowrap px-6"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openExternalUrl(GOOGLE_MAPS_URL);
+                  }}
                 >
                   Open Maps
                   <ExternalLink className="w-3 h-3 ml-2" />
@@ -258,11 +261,10 @@ export const ContactSection = memo(() => {
               </div>
 
               {/* Click Shield - only active when not hovered to allow iframe interaction once focused */}
-              <div className="absolute inset-0 bg-transparent group-hover:hidden" />
+              <div className="absolute inset-0 bg-transparent group-hover:hidden z-10 pointer-events-none md:pointer-events-auto" />
             </motion.div>
           </div>
 
-          {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
             action="https://formspree.io/f/xdaanoen"
@@ -270,7 +272,7 @@ export const ContactSection = memo(() => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, type: 'spring' }}
-            className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/10 shadow-2xl space-y-8 relative overflow-hidden group/form"
+            className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/10 shadow-2xl space-y-6 md:space-y-8 relative overflow-hidden group/form"
           >
             {/* Decorative background gradients */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover/form:bg-primary/20 transition-colors duration-500" />
@@ -429,7 +431,7 @@ export const ContactSection = memo(() => {
           </motion.form>
         </div>
       </div>
-    </section>
+    </section >
   );
 });
 
