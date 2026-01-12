@@ -54,7 +54,7 @@ const ContactCard = memo(({ item, index, isInView }: { item: typeof contactInfo[
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: 1.02, y: -5 }}
-      className="flex items-center gap-5 p-6 rounded-2xl bg-card/50 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-all cursor-pointer group relative overflow-hidden shadow-sm hover:shadow-2xl"
+      className="flex items-center gap-4 md:gap-5 p-4 md:p-6 rounded-2xl bg-card/50 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-all cursor-pointer group relative overflow-hidden shadow-sm hover:shadow-2xl"
     >
       {/* Animated background */}
       <motion.div
@@ -135,7 +135,7 @@ export const ContactSection = memo(() => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         animate={{
@@ -202,7 +202,7 @@ export const ContactSection = memo(() => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl h-[320px] group isolate"
+              className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl h-[400px] sm:h-[320px] group isolate"
             >
               {/* Actual Google Map Embed with custom styling */}
               <iframe
@@ -217,7 +217,7 @@ export const ContactSection = memo(() => {
               />
 
               {/* Premium Overlay UI - Becomes visible on hover */}
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Glassmorphism Header */}
               <div className="absolute top-4 left-4 right-4 pointer-events-none">
@@ -228,8 +228,8 @@ export const ContactSection = memo(() => {
               </div>
 
               {/* Bottom Info Card */}
-              <div className="absolute bottom-4 left-4 right-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-between">
-                <div className="bg-card/60 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl max-w-[240px]">
+              <div className="absolute bottom-4 left-4 right-4 translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-500 flex flex-col sm:flex-row items-stretch sm:items-end justify-between gap-4">
+                <div className="bg-card/60 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-2xl w-full sm:max-w-[240px]">
                   <p className="text-white font-bold text-sm mb-1 flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-primary" />
                     Our Global Office
@@ -270,7 +270,7 @@ export const ContactSection = memo(() => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, type: 'spring' }}
-            className="p-8 lg:p-10 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/10 shadow-2xl space-y-8 relative overflow-hidden group/form"
+            className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-card/60 backdrop-blur-xl border border-white/10 shadow-2xl space-y-8 relative overflow-hidden group/form"
           >
             {/* Decorative background gradients */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl group-hover/form:bg-primary/20 transition-colors duration-500" />
@@ -278,7 +278,7 @@ export const ContactSection = memo(() => {
             {/* Form header */}
             {/* Form header */}
             <div className="mb-8 relative z-10">
-              <h3 className="font-display text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-secondary">
+              <h3 className="font-display text-2xl md:text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-secondary">
                 Send us a message
               </h3>
               <p className="text-muted-foreground text-base">
